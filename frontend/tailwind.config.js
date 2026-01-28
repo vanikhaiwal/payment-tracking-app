@@ -1,14 +1,20 @@
- /** @type {import('tailwindcss').Config} */
- export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  
-  plugins: [],
+import daisyui from 'daisyui';
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
-extend: {
-  color: {
-    'primary': '#D7D3BF',
-  }
-}
-    ,
+    extend: {},
+  },
+  plugins: [
+    daisyui,
+  ],
+  // DaisyUI theme configuration
+  daisyui: {
+    themes: ["dark", "light", "cupcake", "synthwave"],
+    darkTheme: "dark",
   },
 };
